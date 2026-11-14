@@ -1,0 +1,22 @@
+input:
+  dataset: data/raw/o1_28_2d_paths1/csi_raw.npz
+split:
+  axis: x
+  regions:
+    validation: [0, 14]
+    train: [16, 84]
+    test: [86, 100]
+  require_all_raw_users_valid: true
+features:
+  names: [log_amplitude_db, cos_phase, sin_phase]
+  amplitude_floor: 1.0e-12
+  chunk_size: 256
+output:
+  directory: data/processed/o1_28_2d_paths1
+  features_file: features.npy
+  positions_file: positions_xy.npy
+  normalized_targets_file: targets_normalized.npy
+  user_ids_file: user_ids.npy
+  split_codes_file: split_codes.npy
+  split_indices_file: split_indices.npz
+  metadata_file: preprocessing_metadata.json

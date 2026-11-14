@@ -1,0 +1,31 @@
+.venv/
+.cache/
+__pycache__/
+*.py[cod]
+
+# DeepMIMO scenarios and generated artifacts can be large.
+deepmimo_scenarios/
+data/raw/*
+!data/raw/.gitkeep
+outputs/*
+!outputs/.gitkeep
+report/
+
+# Preprocessed CSI tensors are generated locally and exceed GitHub's file limit.
+data/processed/**/features.npy
+
+# Trained model checkpoints can also become large and are reproducible.
+*.pt
+*.pth
+*.ckpt
+
+# LaTeX build intermediates (the final PDF remains versioned).
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.vrb

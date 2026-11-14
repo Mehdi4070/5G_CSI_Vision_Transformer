@@ -1,0 +1,7 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+deepmimo==4.0.5
+matplotlib==3.11.2
+numpy==2.2.6
+PyYAML==6.0.3
+torch==2.15.0+cpu

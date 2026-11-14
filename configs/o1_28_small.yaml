@@ -1,0 +1,29 @@
+# Step 1: a deliberately small DeepMIMO experiment for data validation.
+scenario:
+  name: o1_28
+  directory: deepmimo_scenarios
+
+# In DeepMIMO v4's O1_28 metadata, RX set 0 is RX_1 and TX set 4 is TX_3.
+# BS 3 is commonly used in O1 experiments. We load its single transmitter
+# point and a contiguous, dense UE region.
+selection:
+  mode: indices
+  tx_set: 4
+  tx_point: 0
+  rx_set: 0
+  first_user: 0
+  num_users: 1000
+  user_stride: 1
+
+channel:
+  bs_antenna_shape: [8, 8]
+  ue_antenna_shape: [1, 1]
+  antenna_spacing_wavelengths: 0.5
+  num_paths: 10
+  bandwidth_hz: 50000000
+  num_subcarriers: 64
+
+output:
+  directory: data/raw/o1_28_small
+  dataset_filename: csi_raw.npz
+  report_filename: validation_report.json

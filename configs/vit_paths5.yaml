@@ -1,0 +1,27 @@
+data:
+  directory: data/processed/o1_28_2d_paths5
+  batch_size: 64
+  num_workers: 0
+model:
+  architecture: vit
+  image_size: [64, 64]
+  patch_size: [8, 8]
+  embedding_dim: 96
+  depth: 4
+  num_heads: 4
+  mlp_ratio: 2.0
+  dropout: 0.10
+training:
+  seed: 42
+  device: auto
+  cpu_threads: 4
+  max_epochs: 40
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+  scheduler_factor: 0.5
+  scheduler_patience: 3
+  minimum_learning_rate: 0.000005
+  early_stopping_patience: 8
+  early_stopping_min_delta_m: 0.01
+output:
+  directory: outputs/multipath/vit_paths5

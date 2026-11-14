@@ -1,0 +1,197 @@
+{
+  "input_dataset": "data/raw/o1_28_2d/csi_raw.npz",
+  "num_users": 10000,
+  "feature_shape": [
+    10000,
+    3,
+    64,
+    64
+  ],
+  "feature_dtype": "float32",
+  "feature_representation": [
+    "log_amplitude_db",
+    "cos_phase",
+    "sin_phase"
+  ],
+  "feature_standardization": {
+    "feature_names": [
+      "log_amplitude_db",
+      "cos_phase",
+      "sin_phase"
+    ],
+    "mean": [
+      -112.8546358126221,
+      1.5027500669535492e-05,
+      -9.868914486758183e-07
+    ],
+    "std": [
+      5.070719240235222,
+      0.7071067905623605,
+      0.707106771397392
+    ],
+    "fitted_values_per_channel": 27852800,
+    "fitted_users": 6800
+  },
+  "target_standardization": {
+    "mean": [
+      252.32300051520852,
+      440.0710021972656
+    ],
+    "std": [
+      3.9255566462075695,
+      5.773214220993431
+    ],
+    "fitted_users": 6800
+  },
+  "split": {
+    "axis": "x",
+    "num_unique_columns": 100,
+    "coordinate_min": 242.42300415039062,
+    "coordinate_max": 262.2229919433594,
+    "regions": {
+      "validation": {
+        "code": 1,
+        "num_users": 1400,
+        "num_columns": 14,
+        "column_range": [
+          0,
+          14
+        ],
+        "xy_min": [
+          242.42300415039062,
+          430.1709899902344
+        ],
+        "xy_max": [
+          245.0229949951172,
+          449.97100830078125
+        ]
+      },
+      "train": {
+        "code": 0,
+        "num_users": 6800,
+        "num_columns": 68,
+        "column_range": [
+          16,
+          84
+        ],
+        "xy_min": [
+          245.6230010986328,
+          430.1709899902344
+        ],
+        "xy_max": [
+          259.02301025390625,
+          449.97100830078125
+        ]
+      },
+      "test": {
+        "code": 2,
+        "num_users": 1400,
+        "num_columns": 14,
+        "column_range": [
+          86,
+          100
+        ],
+        "xy_min": [
+          259.62298583984375,
+          430.1709899902344
+        ],
+        "xy_max": [
+          262.2229919433594,
+          449.97100830078125
+        ]
+      },
+      "guard": {
+        "code": -1,
+        "num_users": 400,
+        "num_columns": 4
+      }
+    },
+    "retained_users": 9600,
+    "excluded_guard_users": 400,
+    "retained_fractions": {
+      "validation": 0.14583333333333334,
+      "train": 0.7083333333333334,
+      "test": 0.14583333333333334
+    },
+    "axis_separation_m": {
+      "validation_to_train": 0.600006103515625,
+      "validation_to_test": 14.599990844726562,
+      "train_to_test": 0.5999755859375
+    }
+  },
+  "post_transform_train_check": {
+    "features": {
+      "mean": [
+        2.629586873894977e-07,
+        9.161617397875241e-09,
+        2.346007129595001e-08
+      ],
+      "std": [
+        0.9999999996319505,
+        1.0000000304947396,
+        1.000000003242969
+      ]
+    },
+    "targets": {
+      "mean": [
+        6.323954200043398e-07,
+        -2.1129474043846132e-06
+      ],
+      "std": [
+        0.9999999927505961,
+        0.9999999870920363
+      ]
+    }
+  },
+  "files": {
+    "features_file": "features.npy",
+    "positions_file": "positions_xy.npy",
+    "normalized_targets_file": "targets_normalized.npy",
+    "user_ids_file": "user_ids.npy",
+    "split_codes_file": "split_codes.npy",
+    "split_indices_file": "split_indices.npz",
+    "metadata_file": "preprocessing_metadata.json"
+  },
+  "configuration": {
+    "input": {
+      "dataset": "data/raw/o1_28_2d/csi_raw.npz"
+    },
+    "split": {
+      "axis": "x",
+      "regions": {
+        "validation": [
+          0,
+          14
+        ],
+        "train": [
+          16,
+          84
+        ],
+        "test": [
+          86,
+          100
+        ]
+      },
+      "require_all_raw_users_valid": true
+    },
+    "features": {
+      "names": [
+        "log_amplitude_db",
+        "cos_phase",
+        "sin_phase"
+      ],
+      "amplitude_floor": 1e-12,
+      "chunk_size": 256
+    },
+    "output": {
+      "directory": "data/processed/o1_28_2d",
+      "features_file": "features.npy",
+      "positions_file": "positions_xy.npy",
+      "normalized_targets_file": "targets_normalized.npy",
+      "user_ids_file": "user_ids.npy",
+      "split_codes_file": "split_codes.npy",
+      "split_indices_file": "split_indices.npz",
+      "metadata_file": "preprocessing_metadata.json"
+    }
+  }
+}

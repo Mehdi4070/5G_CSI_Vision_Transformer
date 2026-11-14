@@ -1,0 +1,25 @@
+data:
+  directory: data/processed/o1_28_2d
+  batch_size: 128
+  num_workers: 0
+
+model:
+  channels: [16, 32, 64, 96]
+  dropout: 0.20
+
+training:
+  seed: 42
+  device: auto
+  cpu_threads: 4
+  max_epochs: 30
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  scheduler_factor: 0.5
+  scheduler_patience: 3
+  minimum_learning_rate: 0.00001
+  early_stopping_patience: 8
+  early_stopping_min_delta_m: 0.01
+
+output:
+  directory: outputs/cnn_baseline
+
