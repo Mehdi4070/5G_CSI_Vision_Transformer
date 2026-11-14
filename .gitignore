@@ -10,6 +10,7 @@ data/raw/*
 outputs/*
 !outputs/.gitkeep
 report/
+presentation/
 
 # Preprocessed CSI tensors are generated locally and exceed GitHub's file limit.
 data/processed/**/features.npy
