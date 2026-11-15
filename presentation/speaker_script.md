@@ -6,7 +6,7 @@ Durée visée : **13 à 15 minutes**, hors questions.
 
 | Intervenant | Diapositives | Partie | Durée indicative |
 |---|---:|---|---:|
-| **Personne 1** | 1 à 4 | Introduction, système et principe du CSI | environ 3 min 10 |
+| **Mehdi** | 1 à 4 | Introduction, système et principe du CSI | environ 3 min 10 |
 | **Personne 2** | 5 à 7 | Scénario, prétraitement et architectures | environ 3 min 35 |
 | **Personne 3** | 8 à 11 | Protocole, résultats, multipath et bruit | environ 4 min 10 |
 | **Personne 4** | 12 à 15 | Paramètres, discussion et conclusion | environ 3 min 15 |
