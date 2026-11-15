@@ -6,10 +6,10 @@ Target duration: **13 to 15 minutes**, excluding questions.
 
 | Speaker | Slides | Part | Approximate duration |
 |---|---:|---|---:|
-| **Speaker 1** | 1 to 4 | Introduction, system overview, and CSI principle | about 3 min 10 |
-| **Speaker 2** | 5 to 7 | Scenario, preprocessing, and architectures | about 3 min 35 |
-| **Speaker 3** | 8 to 11 | Protocol, results, multipath, and noise | about 4 min 10 |
-| **Speaker 4** | 12 to 15 | System parameters, discussion, and conclusion | about 3 min 15 |
+| **Mehdi** | 1 to 4 | Introduction, system overview, and CSI principle | about 3 min 10 |
+| **Youssef** | 5 to 7 | Scenario, preprocessing, and architectures | about 3 min 35 |
+| **Anas** | 8 to 11 | Protocol, results, multipath, and noise | about 4 min 10 |
+| **Momtez** | 12 to 15 | System parameters, discussion, and conclusion | about 3 min 15 |
 
 Replace “Speaker 1,” etc. with your names. Every speaker should understand the
 overall conclusion and the main figures, even when they do not appear in that
