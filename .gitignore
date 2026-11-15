@@ -10,7 +10,11 @@ data/raw/*
 outputs/*
 !outputs/.gitkeep
 report/
-presentation/
+
+# Keep the generated presentation private, but version both speaker scripts.
+presentation/*
+!presentation/speaker_script.md
+!presentation/speaker_script_en.md
 
 # Preprocessed CSI tensors are generated locally and exceed GitHub's file limit.
 data/processed/**/features.npy
